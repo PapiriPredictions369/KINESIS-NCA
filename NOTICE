@@ -1,0 +1,34 @@
+KINESIS-NCA: Neuromorphic Cognitive Architecture
+Copyright 2026 Luis Guillermo Papiri Melendez
+
+Licensed under the Apache License, Version 2.0.
+
+This project implements the architecture described in Papiri Melendez
+(2026), "N-BIO: A Neuromorphic Bio-Integrated Architecture Unifying
+Microtubule Cellular Automata, Astrocytic Homeostatic Gating, and Locus
+Coeruleus Modulation for Robust Neuromorphic Computing"
+(papers/N-BIO_arXiv_preprint.pdf). The codebase and repository are
+branded KINESIS-NCA rather than N-BIO solely to avoid a naming
+collision with an unrelated, pre-existing project also called N-BIO;
+this is not a rebranding of the cited paper itself, which retains its
+original title and authorship.
+
+This product includes an algorithmic (not biophysical) model of
+microtubule protofilament dynamics and astrocytic calcium-wave
+homeostasis, structurally cross-referenced against independently
+published hardware characterization work on Double-Gate Ferroelectric
+FET (DG-FeFET) devices:
+
+  - Jiang, Z., et al. (2025). A Bio-inspired Asymmetric Double-Gate
+    Ferroelectric FET for Emulating Astrocyte and Dendrite Dynamics in
+    Neuromorphic Systems. arXiv:2504.14466.
+  - Islam, A. N. M. N. (2025). Leveraging Intrinsic Characteristics of
+    Neuromorphic Ferroelectric Devices for Efficient Computing.
+    PhD Dissertation, Penn State University.
+
+No hardware, silicon, or device-fabrication IP is included, implemented,
+or claimed by this repository. All code herein is an original,
+independent software implementation of the algorithmic specification
+described in the accompanying paper. No patent claims, licenses, or
+rights of the DG-FeFET works cited above are asserted, implied, or
+conveyed by this NOTICE or by this repository.

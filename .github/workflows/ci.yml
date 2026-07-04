@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install torch numpy scipy --index-url https://download.pytorch.org/whl/cpu
+      - name: Spectral pipeline self-test (RMT ground truth recovery)
+        run: python src/spectral/spectral_level_stats.py
+      - name: Ratio test demo (outlier-robust GOE recovery)
+        working-directory: src/spectral
+        run: python ratio_test.py
+      - name: KINESIS-NCA model forward pass + parameter count check
+        run: |
+          python -c "
+          import sys; sys.path.insert(0, 'src')
+          from kinesis import KinesisV4, BaselineMLP, count_parameters
+          import torch
+          m = KinesisV4()
+          y = m(torch.randn(4, 1, 28, 28))
+          assert y.shape == (4, 10)
+          assert count_parameters(m) == 448372, count_parameters(m)
+          assert count_parameters(BaselineMLP()) == 218058
+          print('KINESIS-NCA (V4) architecture check: PASS')
+          "

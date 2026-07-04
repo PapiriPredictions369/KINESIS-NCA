@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this code or these predictions, please cite as below."
+title: "KINESIS-NCA: A Neuromorphic Cognitive Architecture, and the Tubulin-GUE Conjecture"
+authors:
+  - family-names: "Papiri Melendez"
+    given-names: "Luis Guillermo"
+date-released: 2026-02-01
+license: "Apache-2.0"
+repository-code: "https://github.com/REPLACE_ME/kinesis-nca"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Papiri Melendez"
+      given-names: "Luis Guillermo"
+  title: "N-BIO: A Neuromorphic Bio-Integrated Architecture Unifying Microtubule Cellular Automata, Astrocytic Homeostatic Gating, and Locus Coeruleus Modulation for Robust Neuromorphic Computing"
+  year: 2026
+  notes: "Codebase implementing this paper is distributed under the name KINESIS-NCA to avoid a naming collision with an unrelated, pre-existing N-BIO project. The paper title itself is unchanged."
+references:
+  - type: article
+    authors:
+      - family-names: "Papiri Melendez"
+        given-names: "Luis Guillermo"
+    title: "The Tubulin-GUE Conjecture: A Falsifiable Prediction Connecting Microtubule Excitonic Dynamics to Random Matrix Theory"
+    year: 2026
