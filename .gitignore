@@ -9,3 +9,5 @@ results/*.png
 *.egg-info/
 venv/
 .venv/
+
+kinesis-nca.tar.gz
