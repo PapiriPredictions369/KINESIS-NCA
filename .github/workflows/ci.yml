@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install dependencies
-        run: pip install torch numpy scipy --index-url https://download.pytorch.org/whl/cpu
+        run: pip install torch numpy scipy --extra-index-url https://download.pytorch.org/whl/cpu
       - name: Spectral pipeline self-test (RMT ground truth recovery)
         run: python src/spectral/spectral_level_stats.py
       - name: Ratio test demo (outlier-robust GOE recovery)
